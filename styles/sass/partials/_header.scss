@@ -8,9 +8,9 @@
     }
 
     .header-image {
-        width: 35%;
+        width: 40%;
         img {
-            box-shadow: 20px 20px $white;
+            box-shadow: 20px 20px white;
             position: relative;
             bottom: -50px;
         }
@@ -18,12 +18,13 @@
 
     .header-content {
 
+
         h1 {
             
             position: relative;
             font-size: calc(5rem + 5vw); // PLSCHECK - make sure this works later at different sizes
             text-transform: uppercase;
-            padding: 0 100px;
+            padding: 0 100px 0 50px;
 
             &::before {
                 content: "";
@@ -35,7 +36,7 @@
                 display: block;
                 position: absolute;
                 top: -55%;
-                left: 10%;
+                left: 0;
                 
             }
         }
