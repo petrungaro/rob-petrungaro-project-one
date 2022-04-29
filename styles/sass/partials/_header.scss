@@ -1,0 +1,47 @@
+.header-home {
+    background-color: $orange;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-image {
+        width: 35%;
+        img {
+            box-shadow: 20px 20px $white;
+            position: relative;
+            bottom: -50px;
+        }
+    }
+
+    .header-content {
+
+        h1 {
+            
+            position: relative;
+            font-size: calc(5rem + 5vw); // PLSCHECK - make sure this works later at different sizes
+            text-transform: uppercase;
+            padding: 0 100px;
+
+            &::before {
+                content: "";
+                background-image: url('../assets/circle-text.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: -55%;
+                left: 10%;
+                
+            }
+        }
+
+
+        
+    }
+}
+
