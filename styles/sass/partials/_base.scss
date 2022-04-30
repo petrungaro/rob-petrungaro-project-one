@@ -3,7 +3,7 @@ html {
 }
 
 .wrapper {
-    // max-width: 1200px;
+    max-width: 1200px;
     width: 80%;
     margin: 0 auto;
 }
@@ -73,6 +73,7 @@ p {
 
 .button {
     background-color: $accent;
+    text-transform: uppercase;
     padding: 1.5rem 3rem;
     display: inline-block;
     cursor: pointer;
