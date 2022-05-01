@@ -89,3 +89,15 @@ p {
         box-shadow: none;
     }
 }
+
+footer {
+    background-color: $grey;
+
+    p,a {
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+    }
+}

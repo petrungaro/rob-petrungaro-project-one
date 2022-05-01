@@ -109,3 +109,42 @@ section.link-grid {
     background: center / cover no-repeat url('./../assets/home-image-4.jpg');
     height: 50vh;
 }
+
+section.journey {
+
+    background-color: $white;
+    padding: 80px 0;
+
+    .wrapper {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .img-container {
+        flex-basis: 30%;
+
+        img {
+            box-shadow: 15px 15px $orange;
+        }
+    }
+
+    .content-container {
+        flex-basis: 60%;
+    }
+
+}
+
+section.gallery {
+
+    background-color: white;
+
+    .wrapper {
+        padding: 80px 0;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
+}

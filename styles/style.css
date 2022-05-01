@@ -342,6 +342,17 @@ p {
           box-shadow: none;
 }
 
+footer {
+  background-color: #4f4f4f;
+}
+footer p, footer a {
+  color: #f0efed;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
 .header-home {
   background-color: #f6a823;
 }
@@ -537,4 +548,45 @@ section.link-grid ul i {
 .full-bleed {
   background: center/cover no-repeat url("./../assets/home-image-4.jpg");
   height: 50vh;
+}
+
+section.journey {
+  background-color: #f0efed;
+  padding: 80px 0;
+}
+section.journey .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.journey .img-container {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+section.journey .img-container img {
+  -webkit-box-shadow: 15px 15px #f6a823;
+          box-shadow: 15px 15px #f6a823;
+}
+section.journey .content-container {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+section.gallery {
+  background-color: white;
+}
+section.gallery .wrapper {
+  padding: 80px 0;
+}
+section.gallery .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
 }
