@@ -1,0 +1,11 @@
+.header-blog {
+    background: center / cover no-repeat url('./../assets/blog-image-1.jpg');
+    height:40vh;
+    position: relative;
+
+    h1 {
+        margin: 0;
+        position: absolute;
+        bottom: -50px;
+    }
+}
