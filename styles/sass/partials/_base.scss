@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -15,6 +16,7 @@ h1 {
     line-height: 9.2rem;
     color: $black;
     letter-spacing: 0rem;
+    text-transform: uppercase;
 }
 
 h2, 
@@ -88,6 +90,10 @@ p {
         transform: translate(5px, 5px);
         box-shadow: none;
     }
+}
+
+button {
+    border: none;
 }
 
 footer {

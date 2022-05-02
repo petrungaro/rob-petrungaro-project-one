@@ -58,6 +58,7 @@ section.blog-posts {
         margin: 0;
         top: 30px;
         
+        
         .content-container {
             align-self: flex-start;
             text-align: right;
@@ -67,6 +68,7 @@ section.blog-posts {
 
         .blog-img-container {
             
+            align-self: flex-end;
 
             img {
                 box-shadow: 10px 10px $orange, 200px 10px $orange;
