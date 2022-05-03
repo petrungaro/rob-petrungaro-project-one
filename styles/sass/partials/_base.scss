@@ -107,3 +107,53 @@ footer {
         margin: 0;
     }
 }
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    input, textarea {
+        border: none;
+        padding: 2rem;
+        font-size: 2rem;
+        font-family: $primary;
+
+        &::placeholder {
+            font-style: italic;
+            font-family: $primary;
+            font-size: 1.6rem;
+        }
+    }
+
+    .name-field {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .email-field {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+
+
+    textarea {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        min-height: 200px;
+        resize: none;
+    }
+
+    button {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .button {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}

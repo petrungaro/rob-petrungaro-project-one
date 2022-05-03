@@ -6,6 +6,143 @@
     h1 {
         margin: 0;
         position: absolute;
-        bottom: -50px;
+        bottom: -4rem;
     }
 }
+
+body {
+    background: $white;
+}
+
+.flex-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    // GENERAL STYLES & SIZING FOR ASIDE / BLOG
+    aside {
+        flex: 25%;
+        margin-right: 25px; 
+        >* {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+    }
+    .main-blog {
+        flex: 75%;
+        .blog-post,
+        .comment-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+    }
+
+    // SPECIFIC STYLES
+    
+    // ASIDE
+    aside {
+
+        h3 {
+            font-size: 2.2rem;
+        }
+
+        a {
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+        }
+
+        .profile {
+            img {
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+            }
+            
+            a {
+                color: $accent;
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            font-size: 1.6rem;
+            list-style: disc;
+            margin-top: 25px;
+
+            li {
+                margin-left: 25px;
+                padding: .5rem 0;
+                &::marker {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+
+    // BLOG
+    .main-blog {
+
+
+        section {
+            margin-bottom: 25px;
+        
+            &.blog-post {
+                
+                h2 {
+                    font-size: 3.2rem;
+                }
+                .author {
+                    font-size: 1.8rem;
+                    font-style: italic;
+                    span {
+                        color: $accent;
+                    }
+                }
+            } // END section.blog-post 
+
+            &.comments {
+                
+                .comment-card {
+                    margin-bottom: 30px;
+                    display: flex;
+                    align-items: flex-start;
+
+                    img {
+                        flex:15%;
+                        margin-right: 15px;
+                    }
+
+                    
+
+                    .comment-content {
+                        flex: 85%;
+
+                        .commenter {
+                            font-size: 1.8rem;
+                            font-style: italic;
+                            font-weight: 400;
+                            color: $accent;
+                            margin: 0;
+                        }
+                    }
+                }
+            } //END section.comments 
+            
+            &.blog-post,
+            .comment-card:last-of-type {
+                border-bottom: 5px solid $orange;
+            }
+
+        } // END section
+    } // END .main-blog
+
+} // END .flex-container

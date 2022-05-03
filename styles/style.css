@@ -359,6 +359,67 @@ footer p, footer a {
   margin: 0;
 }
 
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+form input, form textarea {
+  border: none;
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+form input::placeholder, form textarea::placeholder {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+form .name-field {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+form .email-field {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+form textarea {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-height: 200px;
+  resize: none;
+}
+form button {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+form .button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .header-home {
   background-color: #f6a823;
 }
@@ -609,7 +670,7 @@ section.gallery .wrapper ul {
 .header-contact h1 {
   margin: 0;
   position: absolute;
-  bottom: -50px;
+  bottom: -4rem;
 }
 
 section.contact {
@@ -662,63 +723,6 @@ section.contact form {
   -webkit-box-flex: 70%;
       -ms-flex: 70% 1 1;
           flex: 70% 1 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-section.contact form input, section.contact form textarea {
-  border: none;
-  padding: 2rem;
-  font-size: 2rem;
-}
-section.contact form input::-webkit-input-placeholder, section.contact form textarea::-webkit-input-placeholder {
-  font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-}
-section.contact form input::-moz-placeholder, section.contact form textarea::-moz-placeholder {
-  font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-}
-section.contact form input:-ms-input-placeholder, section.contact form textarea:-ms-input-placeholder {
-  font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-}
-section.contact form input::-ms-input-placeholder, section.contact form textarea::-ms-input-placeholder {
-  font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-}
-section.contact form input::placeholder, section.contact form textarea::placeholder {
-  font-style: italic;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-}
-section.contact form .name-field {
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-section.contact form .email-field {
-  grid-row-start: 1;
-  grid-column-start: 2;
-}
-section.contact form textarea {
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  min-height: 200px;
-  resize: none;
-}
-section.contact form button {
-  grid-row-start: 3;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-section.contact form .button {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .header-blog {
@@ -729,5 +733,119 @@ section.contact form .button {
 .header-blog h1 {
   margin: 0;
   position: absolute;
-  bottom: -50px;
+  bottom: -4rem;
+}
+
+body {
+  background: #f0efed;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 100px;
+}
+.flex-container aside {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  margin-right: 25px;
+}
+.flex-container aside > * {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.flex-container .main-blog {
+  -webkit-box-flex: 75%;
+      -ms-flex: 75%;
+          flex: 75%;
+}
+.flex-container .main-blog .blog-post,
+.flex-container .main-blog .comment-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+.flex-container aside h3 {
+  font-size: 2.2rem;
+}
+.flex-container aside a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+.flex-container aside .profile img {
+  margin-bottom: 25px;
+}
+.flex-container aside .profile p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.flex-container aside .profile a {
+  color: #05afc1;
+  font-weight: 700;
+}
+.flex-container aside ul {
+  font-size: 1.6rem;
+  list-style: disc;
+  margin-top: 25px;
+}
+.flex-container aside ul li {
+  margin-left: 25px;
+  padding: 0.5rem 0;
+}
+.flex-container aside ul li::marker {
+  color: #f6a823;
+}
+.flex-container .main-blog section {
+  margin-bottom: 25px;
+}
+.flex-container .main-blog section.blog-post h2 {
+  font-size: 3.2rem;
+}
+.flex-container .main-blog section.blog-post .author {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+.flex-container .main-blog section.blog-post .author span {
+  color: #05afc1;
+}
+.flex-container .main-blog section.comments .comment-card {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.flex-container .main-blog section.comments .comment-card img {
+  -webkit-box-flex: 15%;
+      -ms-flex: 15%;
+          flex: 15%;
+  margin-right: 15px;
+}
+.flex-container .main-blog section.comments .comment-card .comment-content {
+  -webkit-box-flex: 85%;
+      -ms-flex: 85%;
+          flex: 85%;
+}
+.flex-container .main-blog section.comments .comment-card .comment-content .commenter {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #05afc1;
+  margin: 0;
+}
+.flex-container .main-blog section.blog-post,
+.flex-container .main-blog section .comment-card:last-of-type {
+  border-bottom: 5px solid #f6a823;
 }
