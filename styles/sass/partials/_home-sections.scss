@@ -19,6 +19,8 @@ section.about {
 
 section.blog-posts {
 
+    background-color: white;
+
     .wrapper {
         display: flex;
         flex-direction: column
@@ -35,22 +37,38 @@ section.blog-posts {
 
         .blog-img-container {
             width: 50%;
+            position: relative;
             img {
                 box-shadow: 10px 10px $rust, -200px 10px $rust;
             }
-        }
 
-        .content-container {
-            max-width: 40%;
-            align-self: flex-end;
-            margin-top: 50px;
-            h3 {
-                text-transform: uppercase
+            // PLSCHECK - make display:none in media queries 
+            &::before {
+                content: '';
+                height: 100%;
+                width:100vw;
+                background-color: $rust;
+                position: absolute;
+                right: 100%;
+                top: 10px;
+
             }
-            
         }
     }
 
+
+    .content-container {
+        max-width: 40%;
+        align-self: flex-end;
+        margin-top: 50px;
+        h3 {
+            text-transform: uppercase
+        }
+        
+    }
+    
+    
+    // STYLES FOR SECOND CONTAINER
     .container:nth-of-type(2) {
         display: flex;
         flex-direction: row-reverse;
@@ -69,9 +87,16 @@ section.blog-posts {
         .blog-img-container {
             
             align-self: flex-end;
-
             img {
                 box-shadow: 10px 10px $orange, 200px 10px $orange;
+            }
+
+            // PLSCHECK - make display:none in media queries 
+            &::before {
+                background-color: $orange;
+                right: revert;
+                left: 100%;
+
             }
         }
     }

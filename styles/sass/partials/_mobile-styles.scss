@@ -1,0 +1,111 @@
+@media (max-width: 1300px) {
+
+    // removing the extra-long box-shadows on the index page because they misbehave under ~1300px
+
+    section.blog-posts .container .blog-img-container::before {
+        display: none; 
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    // GLOBAL
+
+    .wrapper {
+        width: 85%;
+    }
+
+
+    // HOMEPAGE
+
+    .header-home .header-content {
+        h1 {
+            font-size: 8rem;
+        }
+    }    
+
+    section.blog-posts {
+
+        .container {
+            align-items: center;
+
+            &:nth-of-type(2) {
+                .content-container {
+                    align-self: center;
+                }
+                .blog-img-container {
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    section.link-grid ul {
+        flex-direction: column;
+        li {
+            max-width: 100%;
+        }
+    }
+}
+
+// at 800, move the header profile image and make the nav turn into a hamburger menu
+
+@media (max-width: 800px) {
+
+    nav ul .logo {
+        display: none
+    }
+
+    .header-home .wrapper {
+        flex-direction: column;
+        justify-content: center;
+
+        .header-content {
+            margin-top: 50px;
+
+            h1 {
+                padding-right: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .header-image {
+            width: 50%;
+        }
+        }
+
+    .about-container {
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    section.blog-posts .container {
+        
+        flex-direction: column;
+        &:nth-of-type(2) {
+            flex-direction: column;
+
+            .content-container {
+                margin: 50px 0;
+            }
+        }
+
+        .blog-img-container {
+            width: 80%;
+        }
+
+        .content-container {
+            max-width: 80%;
+            align-self: center;
+            
+        }
+
+
+    }
+}
+// TABLET - Portrait 
+
+
+
+// PHONE

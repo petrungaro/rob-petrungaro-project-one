@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -445,7 +446,7 @@ form .button {
 }
 .header-home .header-content h1 {
   position: relative;
-  font-size: calc(5rem + 5vw);
+  font-size: 13rem;
   text-transform: uppercase;
   padding: 0 100px 0 50px;
 }
@@ -517,6 +518,9 @@ section.about h2 {
   text-transform: uppercase;
 }
 
+section.blog-posts {
+  background-color: white;
+}
 section.blog-posts .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,18 +544,28 @@ section.blog-posts .container {
 }
 section.blog-posts .container .blog-img-container {
   width: 50%;
+  position: relative;
 }
 section.blog-posts .container .blog-img-container img {
   -webkit-box-shadow: 10px 10px #a82706, -200px 10px #a82706;
           box-shadow: 10px 10px #a82706, -200px 10px #a82706;
 }
-section.blog-posts .container .content-container {
+section.blog-posts .container .blog-img-container::before {
+  content: "";
+  height: 100%;
+  width: 100vw;
+  background-color: #a82706;
+  position: absolute;
+  right: 100%;
+  top: 10px;
+}
+section.blog-posts .content-container {
   max-width: 40%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-top: 50px;
 }
-section.blog-posts .container .content-container h3 {
+section.blog-posts .content-container h3 {
   text-transform: uppercase;
 }
 section.blog-posts .container:nth-of-type(2) {
@@ -580,6 +594,11 @@ section.blog-posts .container:nth-of-type(2) .blog-img-container {
 section.blog-posts .container:nth-of-type(2) .blog-img-container img {
   -webkit-box-shadow: 10px 10px #f6a823, 200px 10px #f6a823;
           box-shadow: 10px 10px #f6a823, 200px 10px #f6a823;
+}
+section.blog-posts .container:nth-of-type(2) .blog-img-container::before {
+  background-color: #f6a823;
+  right: revert;
+  left: 100%;
 }
 
 section.link-grid {
@@ -848,4 +867,97 @@ body {
 .flex-container .main-blog section.blog-post,
 .flex-container .main-blog section .comment-card:last-of-type {
   border-bottom: 5px solid #f6a823;
+}
+
+@media (max-width: 1300px) {
+  section.blog-posts .container .blog-img-container::before {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  .header-home .header-content h1 {
+    font-size: 8rem;
+  }
+
+  section.blog-posts .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.blog-posts .container:nth-of-type(2) .content-container {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  section.blog-posts .container:nth-of-type(2) .blog-img-container {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  section.link-grid ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.link-grid ul li {
+    max-width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  nav ul .logo {
+    display: none;
+  }
+
+  .header-home .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-home .wrapper .header-content {
+    margin-top: 50px;
+  }
+  .header-home .wrapper .header-content h1 {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  .header-home .wrapper .header-image {
+    width: 50%;
+  }
+
+  .about-container {
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  section.blog-posts .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.blog-posts .container:nth-of-type(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.blog-posts .container:nth-of-type(2) .content-container {
+    margin: 50px 0;
+  }
+  section.blog-posts .container .blog-img-container {
+    width: 80%;
+  }
+  section.blog-posts .container .content-container {
+    max-width: 80%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
