@@ -52,10 +52,31 @@
 // at 800, move the header profile image and make the nav turn into a hamburger menu
 
 @media (max-width: 800px) {
-
+    // BASE //
     nav ul .logo {
         display: none
     }
+
+    form {
+        // size
+        .name-field {
+            grid-column-end: 3;
+        }
+        .email-field {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        textarea {
+            grid-row-start: 3;
+        }
+        button {
+            grid-row-start: 4;
+        }
+    }
+
+
+    // HOMEPAGE // 
 
     .header-home .wrapper {
         flex-direction: column;
@@ -98,12 +119,61 @@
         .content-container {
             max-width: 80%;
             align-self: center;
-            
+        }
+    }
+
+    section.journey {
+
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
         }
 
+        .img-container {
+            width: 50%;
+            margin-bottom: 50px;
+        }
 
+        .content-container {
+            text-align: center;
+        }
     }
-}
+
+    section.gallery .wrapper {
+        ul {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                flex: 30%;
+            }
+        }
+    }
+
+    // CONTACT PAGE //
+
+    section.contact {
+
+        .wrapper {
+            flex-direction: column-reverse;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            margin-right: 0;
+            margin-top: 50px;
+            text-align: center;
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+        
+    }
+
+    // BLOG PAGE //
+
+} // END OF 800 MEDIA QUERY
 // TABLET - Portrait 
 
 

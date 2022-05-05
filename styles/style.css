@@ -912,6 +912,21 @@ body {
     display: none;
   }
 
+  form .name-field {
+    grid-column-end: 3;
+  }
+  form .email-field {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  form textarea {
+    grid-row-start: 3;
+  }
+  form button {
+    grid-row-start: 4;
+  }
+
   .header-home .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -959,5 +974,55 @@ body {
     max-width: 80%;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+
+  section.journey .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.journey .img-container {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  section.journey .content-container {
+    text-align: center;
+  }
+
+  section.gallery .wrapper ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.gallery .wrapper ul li {
+    -webkit-box-flex: 30%;
+        -ms-flex: 30%;
+            flex: 30%;
+  }
+
+  section.contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  section.contact .contact-info {
+    margin-right: 0;
+    margin-top: 50px;
+    text-align: center;
+  }
+  section.contact .contact-info .social-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
