@@ -787,7 +787,7 @@ body {
       -ms-flex: 75%;
           flex: 75%;
 }
-.flex-container .main-blog .blog-post,
+.flex-container .main-blog article,
 .flex-container .main-blog .comment-card {
   background: white;
   padding: 25px;
@@ -824,18 +824,21 @@ body {
 .flex-container aside ul li::marker {
   color: #f6a823;
 }
-.flex-container .main-blog section {
+.flex-container .main-blog article {
   margin-bottom: 25px;
 }
-.flex-container .main-blog section.blog-post h2 {
+.flex-container .main-blog article h2 {
   font-size: 3.2rem;
 }
-.flex-container .main-blog section.blog-post .author {
+.flex-container .main-blog article .author {
   font-size: 1.8rem;
   font-style: italic;
 }
-.flex-container .main-blog section.blog-post .author span {
+.flex-container .main-blog article .author span {
   color: #05afc1;
+}
+.flex-container .main-blog section {
+  margin-bottom: 25px;
 }
 .flex-container .main-blog section.comments .comment-card {
   margin-bottom: 30px;
@@ -864,8 +867,8 @@ body {
   color: #05afc1;
   margin: 0;
 }
-.flex-container .main-blog section.blog-post,
-.flex-container .main-blog section .comment-card:last-of-type {
+.flex-container .main-blog article,
+.flex-container .main-blog .comment-card:last-of-type {
   border-bottom: 5px solid #f6a823;
 }
 
@@ -905,6 +908,29 @@ body {
   }
   section.link-grid ul li {
     max-width: 100%;
+  }
+
+  .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .flex-container aside {
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 25px;
+  }
+  .flex-container aside > * {
+    width: 50%;
   }
 }
 @media (max-width: 800px) {
@@ -1024,5 +1050,15 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .flex-container aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flex-container aside > * {
+    width: 100%;
   }
 }

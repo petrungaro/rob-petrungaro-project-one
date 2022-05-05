@@ -10,14 +10,14 @@
 
 @media (max-width: 1024px) {
 
-    // GLOBAL
+    // GLOBAL //
 
     .wrapper {
         width: 85%;
     }
 
 
-    // HOMEPAGE
+    // HOMEPAGE //
 
     .header-home .header-content {
         h1 {
@@ -47,6 +47,25 @@
             max-width: 100%;
         }
     }
+
+    // BLOG //
+
+    .flex-container {
+        flex-direction: column-reverse;
+
+        aside {
+            margin-right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+
+            >* {
+                width: 50%;
+            }
+        }
+    }
+
 }
 
 // at 800, move the header profile image and make the nav turn into a hamburger menu
@@ -173,9 +192,33 @@
 
     // BLOG PAGE //
 
+    .flex-container {
+        
+
+        aside {
+            flex-direction: column;
+
+            >* {
+                width: 100%;
+            }
+        }
+    }
+
 } // END OF 800 MEDIA QUERY
-// TABLET - Portrait 
 
 
 
 // PHONE
+
+@media (max-width: 500px) {
+
+    // NAV //
+        // hide the ul, add a hamburger button, show the ul on click - jquery?
+
+
+    // make homepage blog-posts section wider (90%)
+    // remove paragraph text from link-grid section, leave just the titles and icons, arrange in 2x2 grid/flexbox
+    // tighten up some of the margin-bottoms
+    // adjust font-sizes? everything looks too big
+
+}
