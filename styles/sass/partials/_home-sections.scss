@@ -115,6 +115,11 @@ section.link-grid {
             max-width: 45%;
             display: flex;
             padding-top: 30px;
+
+            a {
+                font-size: inherit;
+                font-style: inherit;
+            }
         }
 
         i {

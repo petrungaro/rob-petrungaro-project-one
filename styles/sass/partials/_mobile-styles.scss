@@ -215,9 +215,52 @@
     // NAV //
         // hide the ul, add a hamburger button, show the ul on click - jquery?
 
+    // make buttons 100% width
+    .button {
+        width: 100%;
+    }
 
+    section.about {
+        
+        padding-bottom: 50px;
+
+        .about-container {
+            width: 100%;
+        }
+    }
     // make homepage blog-posts section wider (90%)
+
+    section.blog-posts .container {
+        
+        .blog-img-container{
+            width: 90%;
+        }
+
+        .content-container {
+            max-width: 90%;
+        }
+
+    }
     // remove paragraph text from link-grid section, leave just the titles and icons, arrange in 2x2 grid/flexbox
+
+    section.link-grid  {
+
+        padding: 50px 0;
+
+        li {
+            p {
+                display: none;
+            }
+
+            &:last-of-type {
+                padding: 30px 0;
+            }
+        }
+    }
+
+    .full-bleed {
+        height: 30vh;
+    }
     // tighten up some of the margin-bottoms
     // adjust font-sizes? everything looks too big
 
