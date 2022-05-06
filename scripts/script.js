@@ -1,17 +1,29 @@
 $(function() {
-    console.log('Oh hello there');
 
-    // $('.menu').hide();
+    const $menu = $('.menu');
+    const $menuButton =  $('.hamburger');
+    const $window = $(window);
 
-    $('.hamburger').on('click', function() {
-        $('.menu').slideToggle("slow")
-    })
+    // Function to check the width of the screen:
+    const checkScreenWidth = function() {
+        const screenWidth = $window.width();
+        
+        // if screen width is 500 or under, run mobileMenu
+        if (screenWidth <= 500) {
+            mobileMenu();
+        }
+    }
+
+    // Function to hide the menu, and enable the slideToggle:
+    const mobileMenu = function() {
+        $menu.hide();
+        $menuButton.on('click', function() {
+            $menu.slideToggle("slow");
+        })
+    }
+
+    
+    checkScreenWidth();
+
 });
 
-// This does not work properly - hides the nav ul at *all* sizes, need to rework:
-
-// If the page is loaded on screen width over 500px, do nothing.
-// If the page is loaded on screen width 500px or under (or resized), do this:
-    // hide the ul .menu, and allow the slideToggle function to run.
-    // if the screen is resized over 500px, show .menu (styling of the menu is in css from row to column, etc)
-    
