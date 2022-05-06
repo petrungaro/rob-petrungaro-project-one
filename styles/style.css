@@ -1067,6 +1067,18 @@ body {
   }
 }
 @media (max-width: 500px) {
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6a823;
+  }
+
   .button {
     width: 100%;
   }
