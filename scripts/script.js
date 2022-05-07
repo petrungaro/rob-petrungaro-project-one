@@ -1,37 +1,50 @@
+const slideNav = {};
+
+// CACHED SELECTORS
+slideNav.$menu = $('.menu');
+slideNav.$menuButton =  $('.hamburger');
+slideNav.$window = $(window);
+
+
+// INITIALIZATION 
+slideNav.init = function() {
+    slideNav.checkScreenWidth();
+    slideNav.$window.resize(slideNav.checkScreenWidth); 
+}
+
+
+// FUNCTIONS / METHODS
+
+// Function to check the width of the screen:
+slideNav.checkScreenWidth = function() { 
+    const screenSize = slideNav.$window.width();
+
+    console.log(screenSize , 'checking');
+    // if screen width is 500 or under, run mobileMenu
+    if (screenSize <= 500) {
+        slideNav.mobileMenu();
+        console.log('under 500, run mobileMenu')
+    } else {
+        slideNav.$menu.show();
+        console.log('should show menu')
+    }
+}
+
+// Function to hide the menu and add a click event listener :
+slideNav.mobileMenu = function() {
+    slideNav.$menu.hide();
+    slideNav.$menuButton.off(); 
+    slideNav.$menuButton.on('click', slideNav.toggleMenu);
+}
+
+// Function to slide the menu in / out on a toggle :
+slideNav.toggleMenu = function() {
+    slideNav.$menu.slideToggle("slow");
+}
+
+//DOCUMENT READY
 $(function() {
-
-    const $menu = $('.menu');
-    const $menuButton =  $('.hamburger');
-    const $window = $(window);
-
-    // Function to check the width of the screen:
-    const checkScreenWidth = function() {
-        const screenWidth = $window.width();
-        console.log(screenWidth, 'checking')
-        
-        // if screen width is 500 or under, run mobileMenu
-        if (screenWidth <= 500) {
-            mobileMenu();
-        } else {
-            $menu.show();
-        }
-    }
-
-    const toggleMenu = function() {
-        $menu.slideToggle("slow");
-    }
-
-    // Function to hide the menu, and enable the slideToggle:
-    const mobileMenu = function() {
-        $menu.hide();
-        $menuButton.off('click', toggleMenu) // THIS SOLVED THE PROBLEM! When I was resizing the window, the toggle would not work properly. It would slide down and up several times. After lots of googling, I think the event listener for on-click was getting applied for every change in screen width (almost counting every pixel), so add the .off() method clears any existing listener  before adding a new one. Not sure if this is ideal, but it seems to work.
-        $menuButton.on('click', toggleMenu)
-    }
-
+    slideNav.init();
     
-    checkScreenWidth(); 
-    $(window).resize(checkScreenWidth);
-
-});
-
-// TO DO: Put all variables / functions in a namespace object, tidy up the code
+})
+$(window).resize(slideNav.checkScreenWidth);
