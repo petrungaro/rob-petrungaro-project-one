@@ -66,9 +66,9 @@
         }
     }
 
-}
+} // END OF 1024 MEDIA QUERY
 
-// at 800, move the header profile image and make the nav turn into a hamburger menu
+
 
 @media (max-width: 800px) {
     // BASE //
@@ -213,7 +213,7 @@
 @media (max-width: 500px) {
 
     // NAV //
-        // hide the ul, add a hamburger button, show the ul on click - jquery?
+      
     nav {
         .menu-bars {
             display: block;
@@ -237,6 +237,8 @@
         width: 100%;
     }
 
+    // ABOUT SECTION 
+
     section.about {
         
         padding-bottom: 50px;
@@ -246,6 +248,7 @@
         }
     }
     
+    // BLOG POSTS SECTION
     section.blog-posts .container {
         
         .blog-img-container{
@@ -258,6 +261,7 @@
 
     }
 
+    // LINK GRID
     section.link-grid  {
 
         padding: 50px 0;
@@ -277,4 +281,12 @@
         height: 30vh;
     }
 
+} // END OF 500 MEDIA QUERY
+
+// XS
+
+@media (max-width: 360px) {
+    .header-home .header-content h1 {
+        font-size: 6rem;
+    }
 }

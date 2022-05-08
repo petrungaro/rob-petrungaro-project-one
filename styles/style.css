@@ -502,8 +502,8 @@ nav ul li a:hover, nav ul li a:focus {
   color: white;
 }
 nav ul li a:focus {
-  border-bottom: 1px solid #f0efed;
-  border-top: 1px solid #f0efed;
+  border-bottom: 2px solid #f0efed;
+  border-top: 2px solid #f0efed;
   outline: none;
 }
 nav input[type=checkbox] {
@@ -1142,5 +1142,10 @@ body {
 
   .full-bleed {
     height: 30vh;
+  }
+}
+@media (max-width: 360px) {
+  .header-home .header-content h1 {
+    font-size: 6rem;
   }
 }
