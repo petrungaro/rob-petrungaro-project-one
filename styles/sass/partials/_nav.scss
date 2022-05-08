@@ -1,6 +1,7 @@
 nav {
     background-color: $orange;
     padding: 5px 0;
+    position: relative;
     
 
     ul {
@@ -9,6 +10,7 @@ nav {
         align-items: center;
         gap: 1rem;
         text-transform: uppercase;
+        transition: top .5s;
 
         .logo {
             font-family: $secondary;
@@ -37,4 +39,33 @@ nav {
 
         }
     }
+
+    // MOBILE MENU
+
+    input[type="checkbox"] {
+        position: absolute;
+        top: -100px;
+
+        &:checked ~ ul {
+            top: 0px;
+        }
+
+        &:checked + .menu-bars>i {
+            transform: rotate(180deg);
+            color: white;
+        }
+    }
+
+    .menu-bars {
+        position: relative;
+        margin: 10px 0 0 15px;
+        z-index: 20;
+        display: none;
+
+        i {
+            font-size: 3rem;
+            transition: transform .5s, color .5s;
+        }
+    }
+
 }
