@@ -14,7 +14,10 @@
 
     <nav>
         <input type="checkbox" name="" id="toggle-switch">
-        <label for="toggle-switch" class="menu-bars"><i class="fa-solid fa-bars"></i></label>
+        <label for="toggle-switch" class="menu-bars">
+            <span class="sr-only">Click to Expand Menu</span>
+            <i class="fa-solid fa-bars"></i>
+        </label>
         <ul>
             <li>
                 <a href="./index.html">Home</a>
@@ -64,8 +67,6 @@
             <!-- MAIN CONTENT -->
             <main id="main-blog" class="main-blog">
                 <!-- BLOG POST -->
-                <!-- PLSCHECK - should be changed to article? -->
-                <!-- <section class="blog-post">  -->
                 <article>   
                     <h2>Why I became a blogger</h2>
                     <p class="author">Tuesday May 3, 2022 by <a href="#sophie-profile"><span>Sophie Barlow</span></a></p>
@@ -76,22 +77,24 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, numquam! Rerum, repellat porro earum nam cumque cupiditate odio molestias. Fuga eum nam ea error nobis explicabo, earum vitae natus praesentium.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illum alias eum velit quos non distinctio rerum tempore qui quam, vel officiis odit dicta adipisci earum voluptas! Necessitatibus, at delectus minima cumque praesentium soluta provident eius in pariatur, maxime nemo sequi rerum. A iusto tempore fugit laudantium. Est, a quasi.</p>
                 </article> 
-                <!-- </section> -->
+
+                <!-- COMMENTS SECTION -->
                 <section class="comments">
                     <div class="comment-card">
-                        <img src="./assets/blog-image-3.jpg" alt="">
+                        <img src="./assets/blog-image-3.jpg" alt="Headshot of man in a polkadot shirt.">
                         <div class="comment-content">
                             <p class="commenter">Monday May 2, 2022 by Safi</p>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quis porro nobis delectus repellendus? Quaerat hic esse cupiditate rerum tempora?</p>
                         </div>
                     </div>
                     <div class="comment-card">
-                        <img src="./assets/blog-image-4.jpg" alt="">
+                        <img src="./assets/blog-image-4.jpg" alt="Headshot of a woman in sunglasses and white t-shirt.">
                         <div class="comment-content">
                             <p class="commenter">Tuesday May 3, 2022 by Darshana</p>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et enim ratione nisi? Atque voluptatum id aspernatur quaerat veniam. Et neque saepe, eveniet architecto magnam inventore ipsa nisi deserunt laboriosam eligendi fugit labore sunt alias molestiae minima? Nulla ipsa cupiditate minima.</p>
                         </div>
                     </div>
+                    <!-- COMMENT FORM -->
                     <form action="" class="form-blog">
                         <label for="name"><span class="sr-only">Name</span></label>
                         <input type="text" id="name" placeholder="Name" class="name-field">
