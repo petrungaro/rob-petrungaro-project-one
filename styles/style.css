@@ -525,7 +525,7 @@ nav .menu-bars {
   display: none;
 }
 nav .menu-bars i {
-  font-size: 3rem;
+  font-size: 30px;
   -webkit-transition: color 0.5s, -webkit-transform 0.5s;
   transition: color 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, color 0.5s;
@@ -1051,6 +1051,9 @@ body {
     text-align: center;
   }
 
+  section.gallery .wrapper {
+    padding: 40px 0;
+  }
   section.gallery .wrapper ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1145,6 +1148,10 @@ body {
   }
 }
 @media (max-width: 360px) {
+  html {
+    font-size: 55%;
+  }
+
   .header-home .header-content h1 {
     font-size: 6rem;
   }

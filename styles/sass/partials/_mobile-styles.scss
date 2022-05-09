@@ -159,6 +159,9 @@
     }
 
     section.gallery .wrapper {
+
+        padding: 40px 0;
+
         ul {
             flex-wrap: wrap;
             justify-content: center;
@@ -286,6 +289,11 @@
 // XS
 
 @media (max-width: 360px) {
+
+    html {
+        font-size: 55%;
+    }
+
     .header-home .header-content h1 {
         font-size: 6rem;
     }
