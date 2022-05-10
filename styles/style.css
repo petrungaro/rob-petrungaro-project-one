@@ -1113,7 +1113,7 @@ body {
     background-color: #f6a823;
     position: absolute;
     z-index: 10;
-    height: 30vh;
+    height: 260px;
     left: 0;
     right: 0;
     top: -300px;
@@ -1121,6 +1121,7 @@ body {
 
   .button {
     width: 100%;
+    text-align: center;
   }
 
   section.about {

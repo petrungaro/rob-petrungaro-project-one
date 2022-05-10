@@ -227,7 +227,7 @@
             background-color: $orange;
             position: absolute;
             z-index: 10;
-            height: 30vh;
+            height: 260px;
             left: 0;
             right: 0;
             top: -300px;
@@ -238,6 +238,7 @@
 
     .button {
         width: 100%;
+        text-align: center;
     }
 
     // ABOUT SECTION 
