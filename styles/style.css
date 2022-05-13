@@ -903,6 +903,11 @@ body {
   color: #05afc1;
   margin: 0;
 }
+.flex-container .main-blog section.comments .fade {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
 .flex-container .main-blog article,
 .flex-container .main-blog .comment-card:last-of-type {
   border-bottom: 5px solid #f6a823;

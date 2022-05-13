@@ -136,8 +136,6 @@ body {
                         margin-right: 15px;
                     }
 
-                    
-
                     .comment-content {
                         flex: 85%;
 
@@ -150,9 +148,12 @@ body {
                         }
                     }
                 }
+                
+                .fade {
+                    opacity: 0;
+                    transition: all 1s;
+                }
             } //END section.comments 
-            
-            
         } // END section
         
         article,
@@ -163,3 +164,4 @@ body {
     } // END .main-blog
 
 } // END .flex-container
+
