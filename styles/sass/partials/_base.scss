@@ -161,3 +161,36 @@ form {
         padding-bottom: .5rem;
     }
 }
+
+.scroll-button {
+    background-color: $orange;
+    width: 75px;
+    height: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        font-size: 35px;
+        color: white;
+        margin: 0 0 3px 3px;
+        transition: all .5s;
+    }
+
+    &:hover,
+    &focus 
+    {
+        transform: scale(1.2);
+        cursor: pointer;
+
+        &>i {
+            transform: rotate(360deg)
+        }
+    }
+}
