@@ -11,4 +11,7 @@ window.addEventListener('scroll', function(){
 // when the button is clicked, scroll to the top of the page
 scrollButton.addEventListener('click', function() {
     window.scrollTo(0,0);
+    setTimeout(function(){
+        scrollButton.style.display = 'none';
+    }, 1000);
 })
